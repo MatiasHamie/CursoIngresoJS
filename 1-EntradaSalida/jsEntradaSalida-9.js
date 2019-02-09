@@ -6,13 +6,11 @@ function mostrarAumento()
 {
 	var ingreseSueldo;
 	var mostrarResultado;
-	var aumento;
-
+	
 	ingreseSueldo = sueldo.value;
 	ingreseSueldo = parseInt(ingreseSueldo);
-	aumento = ingreseSueldo * 0.10;
-
-	mostrarResultado = ingreseSueldo + aumento;
+	
+	mostrarResultado = ingreseSueldo * (1 + 10/100);
 
 	resultado.value = mostrarResultado;
 	
