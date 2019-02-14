@@ -2,12 +2,11 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	//elNombre.value = "Matias";
+	var dato;
 
- 		var nombre;
-		nombre = elNombre.value;
-		//alert("El nombre ingresado es: "+nombre);
-		alert(nombre);
+	dato = elNombre.value;
+
+	alert("El nombre ingresado es: "+dato);
 
 }
 

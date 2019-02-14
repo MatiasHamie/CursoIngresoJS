@@ -11,15 +11,12 @@ function sumar()
 	primerNumero = numeroUno.value;
 	segundoNumero = numeroDos.value;
 
-	primerNumero = parseInt(primerNumero);
+ 	primerNumero = parseInt(primerNumero);
 	segundoNumero = parseInt(segundoNumero);
 
-	suma = primerNumero + segundoNumero;
+	suma = primerNumero+segundoNumero;
 
-	alert(suma);
-
-
-
+	alert("El resultado de la suma es: "+suma);
 
 }
 

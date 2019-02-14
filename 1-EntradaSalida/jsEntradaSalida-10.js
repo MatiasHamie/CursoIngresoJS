@@ -4,13 +4,13 @@ mostrar el importe con un Descuento del 25 %
 en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
-	var tomarImporte;
-	var calculoDescuento;
+	var importeIngresado;
+	var importeFinal;
 
-	tomarImporte = importe.value;
-	tomarImporte = parseInt(tomarImporte);
+	importeIngresado = importe.value;
+	importeIngresado = parseInt(importeIngresado);
 
-	calculoDescuento = tomarImporte * (1 - 25/100);
+	importeFinal = importeIngresado - (importeIngresado * 25/100);
 
-	resultado.value = calculoDescuento;
+	resultado.value = importeFinal;
 }
