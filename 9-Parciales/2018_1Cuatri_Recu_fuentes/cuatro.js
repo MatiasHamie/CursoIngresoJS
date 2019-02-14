@@ -1,6 +1,5 @@
 function mostrar()
 {
-
 	var cantPersonas;
 	var precio;
 	var precioFinal;
@@ -14,7 +13,4 @@ function mostrar()
 	precioFinal = (precio + (precio * 10/100)) / cantAmigos;
 
 	alert("Cantidad de personas: "+cantAmigos+", el precio de la comida es: $"+precio+", con una propina del 10%, cada uno debe pagar: $"+precioFinal);
-
-
-
 }
