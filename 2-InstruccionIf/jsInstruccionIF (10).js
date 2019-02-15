@@ -6,22 +6,22 @@ function mostrar()
 
 	notaExamen = Math.floor((Math.random()*10)+1);
 
-	if(notaExamen>9)
+	if(notaExamen>8)
 	{
-		mensaje = "EXCELENTE";
+		mensaje = "La nota del examen es: "+notaExamen+", EXCELENTE";
 	}
 	else
 	{
-		if (notaExamen>4)
+		if (notaExamen>3)
 		{
-			mensaje = "APROBÓ";
+			mensaje = "La nota del examen es: "+notaExamen+", APROBÓ";
 		}
 		else
 		{
-			mensaje = "Vamos, la próxima se puede";
+			mensaje = "La nota del examen es: "+notaExamen+", Vamos, la próxima se puede";
 		}
 	}
 
-	alert("La nota del examen es: "+notaExamen+", "+mensaje);
+	alert(mensaje);
 
 }//FIN DE LA FUNCIÓN
