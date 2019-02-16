@@ -15,6 +15,7 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	numeroSecreto = Math.floor((Math.random() * 100) + 10);
 	contadorIntentos = 0;
+	console.log(numeroSecreto);
 	//alert(numeroSecreto);
 }
 
@@ -32,8 +33,30 @@ function verificar()
 	//alert(numeroIngresado);
 
 	if(numeroIngresado==numeroSecreto)
-	{
-		mensaje = "Sos un genio";
+	{		
+		switch(contadorIntentos)
+		{
+			case 1:
+				mensaje = "De primera campeon!";
+				break;
+			case 2:
+				mensaje = "Casi perfecto!";
+				break;
+			case 3:
+				mensaje = "La tercera es la vencida!";
+				break;
+			case 4:
+				mensaje = "Bien! intenta mejorar!";
+				break;
+			case 5:
+				mensaje = "Casi que tenes que dedicarte a otra cosa!";
+				break;
+			case 6:
+				mensaje = "Hagamos de cuenta que no paso nada y volver a jugar!";
+				break;
+			default:
+				mensaje = "No te estreses! vos podes!"
+		}
 	}
 	else
 	{
