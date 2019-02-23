@@ -1,65 +1,52 @@
 function mostrar()
 {
-	var contador=0;
-	var maximo;
-	var minimo;
-	var respuesta='si';
-	//var bandera;
+	var respuesta;
+	var numero;
+	var contadorNumero;
+	var numeroMaximo;
+	var numeroMinimo;
 
-	//bandera="es la primera";
-	contador = 0;
-	acumulador = 0;
+	respuesta="si";
+	contadorNumero=0;
 
 	while(respuesta=="si")
 	{
-		contador = contador+1;
-		numero=prompt("Ingrese número "+contador+"#: ");
+		numero=prompt("Por favor ingrese un numero");
 		numero=parseInt(numero);
-		//no voy a saber el valor del acumulador, pero si del contador, esa es la diferencia.
-		//acumulador = acumulador+numero;
-
-		/*
-		if(bandera=="es la primera")
+		console.log(numero);
+		
+		if(contadorNumero==0)
 		{
-			maximo=numero;
-			minimo=numero;
-			bandera="";
-		}
-		*/
-		if(contador==0)
-		{
-			maximo=numero;
-			minimo=numero;
+			numeroMaximo=numero;
+			numeroMinimo=numero;
+		//Saber en este instante cuanto valen el min y el max
+			console.log("Nro maximo "+numeroMaximo);
+			console.log("Nro minimo "+numeroMinimo);
+		
 		}
 		else
 		{
-			if (numero>maximo)
-			{
-				maximo=numero;
-			}
-
-			if (numero<minimo)
-			{
-				minimo=numero;
-			}
-			
-			if (numero>maximo)
-			{
-				maximo=numero;
-			}
-
-			if (numero<minimo)
-			{
-				minimo=numero;
-			}
+			if (numero>numeroMaximo)
+				{
+					numeroMaximo=numero;
+					//Saber en este instante cuanto vale el max
+					console.log("Nro maximo "+numeroMaximo);
+				}
+			else if(numero<numeroMinimo)	
+				{
+					numeroMinimo=numero;
+					//Saber en este instante cuanto vale el min
+					console.log("Nro minimo "+numeroMinimo);
+				}
 		}
-
-		respuesta = prompt("=>si, para continuar");
+		//Saber en este instante cuanto valen el min y el max
+		console.log("Nro minimo "+numeroMinimo);
+		console.log("Nro maximo "+numeroMaximo);
+		contadorNumero=contadorNumero+1;
+		respuesta=prompt("Ingrese 'si' para continuar");
 	}
 
-	document.getElementById('maximo').value = maximo;
-	document.getElementById('minimo').value = minimo;
+	document.getElementById('maximo').value=numeroMaximo;
+	document.getElementById('minimo').value=numeroMinimo;
 }
-
-
 //FIN DE LA FUNCIÓN

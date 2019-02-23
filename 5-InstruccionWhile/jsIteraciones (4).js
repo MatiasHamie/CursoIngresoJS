@@ -1,17 +1,14 @@
 function mostrar()
 {
+	var valor;
 
-	var numero;
+	valor=prompt("Por favor ingrese un valor entre 0 y 9 inclusive");
 
-	numero = prompt("ingrese un número entre 0 y 10.");
-
-	while(numero<0 || numero>10)
+	while(valor<0||valor>9)
 	{
-		numero = prompt("Error, Ingrese un número entre 0 y 10");
+		valor=prompt("Error, ingrese un valor entre 0 y 9 inclusive");
 	}
 
-	alert(numero);
-
-
+	document.getElementById('Numero').value = valor;
 
 }//FIN DE LA FUNCIÓN

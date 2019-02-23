@@ -1,42 +1,39 @@
 function mostrar()
 {
+	var respuesta;
+	var contadorNumero;
+	var numero;
+	var acumuladorPositivo;
+	var productoNegativo;
+	var numeroNegativo;
 
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	
-	var respuesta='si';
+	respuesta="si";
+	contadorNumero=0;
+	acumuladorPositivo=0;
+	productoNegativo=1;
 
-	contador = 0;
-	acumulador = 0;
-
-	while(1)
+	while(respuesta=="si")
 	{
-		contador = contador+1;
-		numero=prompt("Ingrese número "+contador+"#: ");
+		contadorNumero=contadorNumero+1;
+		numero=prompt("Por favor, ingresar el #"+contadorNumero+" número");
 		numero=parseInt(numero);
-		//no voy a saber el valor del acumulador, pero si del contador, esa es la diferencia.
-		//acumulador = acumulador+numero;
 
-		if(numero>0)
+		if (numero>0)
 		{
-			positivo=positivo+numero;
+			acumuladorPositivo=acumuladorPositivo+numero;
 		}
 		else
 		{
-			negativo=negativo*numero;
+			productoNegativo=productoNegativo*numero;
 		}
 
-		respuesta = prompt("=>si, para continuar");
-		
-		if (respuesta!="si")
-		{
-			break;
-		}
+		respuesta=prompt("Ingrese 'si' para continuar");
 	}
 
+	document.getElementById('suma').value=acumuladorPositivo;
+	document.getElementById('producto').value=productoNegativo;	
 
-	document.getElementById('suma').value=positivo;
-	document.getElementById('producto').value=negativo;
+
+
 
 }//FIN DE LA FUNCIÓN

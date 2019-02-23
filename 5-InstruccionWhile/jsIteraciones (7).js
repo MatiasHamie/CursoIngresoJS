@@ -1,25 +1,30 @@
 function mostrar()
 {
 
-	var contador=0;
-	var acumulador=0;
-	var respuesta="si";
+	var continuar;
+	var acumuladorNota;
+	var contadorNota;
+	var valorNota;
+	var promedioNotas;
+	
+	contadorNota=0;
+	acumuladorNota=0;
+	continuar="si"
 
-	contador = 0;
-	acumulador = 0;
-
-	while(respuesta=="si")
+	while(continuar=="si")
 	{
-		contador = contador+1;
-		numero=prompt("Ingrese número "+contador+"#: ");
-		numero=parseInt(numero);
-		//no voy a saber el valor del acumulador, pero si del contador, esa es la diferencia.
-		acumulador = acumulador+numero;
+		contadorNota=contadorNota+1;
+		valorNota=prompt("Por favor ingrese la nota número "+contadorNota+"#");
+		valorNota=parseInt(valorNota);
+		acumuladorNota=acumuladorNota+valorNota;
 
-		respuesta = prompt("=>si, para continuar");
+		continuar=prompt("Ingrese la palabra 'si' para continuar");
 	}
 
-	document.getElementById('suma').value=acumulador;
-	document.getElementById('promedio').value=acumulador/contador;
+	promedioNotas=acumuladorNota/contadorNota;
+
+	document.getElementById('suma').value=acumuladorNota;
+	document.getElementById('promedio').value=promedioNotas;
+
 
 }//FIN DE LA FUNCIÓN

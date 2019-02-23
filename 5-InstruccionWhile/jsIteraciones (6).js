@@ -1,25 +1,24 @@
 function mostrar()
 {
-
-	var contador;
 	var acumulador;
+	var contadorNumero;
 	var numero;
+	var elPromedio;
 
-	contador = 0;
-	acumulador = 0;
+	contadorNumero=0;
+	acumulador=0;
 
-	while(contador<5)
+	while(contadorNumero<5)
 	{
-		contador = contador+1;
-		numero=prompt("Ingrese número "+contador+"#: ");
+		contadorNumero=contadorNumero+1;
+		numero=prompt("Por favor, ingrese el "+contadorNumero+"# número");
 		numero=parseInt(numero);
-		//no voy a saber el valor del acumulador, pero si del contador, esa es la diferencia.
-		acumulador = acumulador+numero;
+		acumulador=acumulador+numero;
 	}
 
+	elPromedio=acumulador/contadorNumero;
 
-
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
-
+	document.getElementById('suma').value=acumulador;
+	document.getElementById('promedio').value=elPromedio;
+	
 }//FIN DE LA FUNCIÓN

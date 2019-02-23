@@ -1,14 +1,16 @@
 function mostrar()
 {
-
 	var clave;
-	clave = prompt("ingrese el número clave.");
 
-	while(clave != "utn750")
+	clave=prompt("Por favor ingrese su clave");
+
+	while(clave!="utn750")
 	{
-		clave = prompt("Error, ingrese el número clave.");
+		clave=prompt("Error, ingrese su clave nuevamente");
 	}
 
 	alert("Bienvenido");
+
+
 
 }//FIN DE LA FUNCIÓN
