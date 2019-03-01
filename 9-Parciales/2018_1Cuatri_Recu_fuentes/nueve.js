@@ -4,6 +4,23 @@ Ingresar marca celular
 Ingresar tamaño (numero)
 Ingresar precio
 1) Mayor precio y "marca" del precio mayor
+2) Promedio precios
+3) Cantidad de celulares
+4) Celular: marca y tamaño del mas caro
+5) IDEM mas barato
+6) El primer celular que sale $1000
+7) Precio del ultimo celular "LG"
+
+Probar con:
+----------------
+Marca   T Precio
+----------------
+lg      3 3000
+samsung 5 5000
+iphone  4 8000
+samsung 4 1000
+lg      5 1000
+
 */
 function mostrar()
 {
