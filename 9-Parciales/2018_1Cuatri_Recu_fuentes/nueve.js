@@ -1,3 +1,122 @@
+/*
+Enunciado práctica en clase:
+Ingresar marca celular
+Ingresar tamaño (numero)
+Ingresar precio
+1) Mayor precio y "marca" del precio mayor
+*/
+function mostrar()
+{
+
+	var ingresaPrecio;
+	var ingresaMarca;
+	var ingresaTamaño;
+	var contadorCelulares;
+	var acumuladorPrecios;
+	var precioMayor;
+	var precioMenor;
+	var precioMenorMarca;
+	var precioMayorMarca;
+	var tamañoMayor;
+	var tamañoMenor;
+	var precioUltimoLG;
+	var respuesta;
+	var precioPromedio;
+	var contadorCeluMayorDosMil;
+	var marcaMil;
+
+	acumuladorPrecios=0;
+	precioUltimoLG=0;
+	contadorCeluMayorDosMil=0;
+	contadorCelulares=0;
+	precioMayor=0;
+	respuesta="si";
+
+	while(respuesta=="si")
+	{
+		ingresaMarca=prompt("Ingrese la marca del celular con letra minúscula");
+
+		ingresaTamaño=prompt("Ingrese el tamaño del celular");
+		ingresaTamaño=parseInt(ingresaTamaño);
+
+		//Valido tamaño
+		while(ingresaTamaño<0)
+		{
+			ingresaTamaño=prompt("tamaño menor a 0, ingrese un tamaño valido");
+		}
+
+		ingresaPrecio=prompt("Ingrese precio del celular");
+		ingresaPrecio=parseInt(ingresaPrecio);
+
+		//Valido precio
+		while(ingresaPrecio<0 || ingresaPrecio>50000)
+		{
+			ingresaPrecio=prompt("PRECIO ERRONEO, ingrese precio mayor a $0 o menor a $50.000");
+		}
+
+		//Acumulo el precio del primer LG
+		if(ingresaMarca=="lg")
+		{
+			precioUltimoLG=ingresaPrecio;
+		}
+		
+		if(contadorCelulares==0)
+		{
+			//Si es >1000 lo guardo como LG
+			if(ingresaPrecio>1000)
+			{
+				marcaMil=ingresaMarca;
+			}
+
+			precioMayorMarca=ingresaMarca;
+			precioMenorMarca=ingresaMarca;
+			precioMenor=ingresaPrecio;
+			precioMayor=ingresaPrecio;
+			tamañoMenor=ingresaTamaño;
+			tamañoMayor=ingresaTamaño;
+		}
+		else
+		{
+			if(ingresaPrecio>precioMayor)
+			{
+				precioMayor=ingresaPrecio;
+				precioMayorMarca=ingresaMarca;
+				tamañoMayor=ingresaTamaño;
+			}	
+		}
+
+		if(ingresaPrecio<precioMenor)
+		{
+			precioMenor=ingresaPrecio;
+			precioMenorMarca=ingresaMarca;
+			tamañoMenor=ingresaTamaño;
+		}
+
+		if(precio>2000)
+		{
+			contadorCeluMayorDosMil++
+		}
+
+		contadorCelulares++;
+		acumuladorPrecios=acumuladorPrecios+ingresaPrecio;
+
+		respuesta=prompt("Ingrese 'si' para continuar");
+	}
+
+	precioPromedio=acumuladorPrecios/contadorCelulares;
+
+	alert(  "\nMarca del celular mas caro: "+precioMayorMarca+
+			"\nMayor precio: "+precioMayor+
+			"\nTamaño del celular mas caro: "+tamañoMayor+
+			"\nMarca del celular mas Barato: "+precioMenorMarca+
+			"\nMenor precio: "+precioMenor+
+			"\nTamaño del celular mas barato: "+tamañoMenor+
+			"\nPromedio total precios: "+precioPromedio+
+			"\nCantidad Celus que valen mas que $2000: "+contadorCeluMayorDosMil+
+			"\nPrimer celular que sale $1000: "+marcaMil+
+			"\nPrecio último LG "+precioUltimoLG);
+
+}
 /*  Realizar el algoritmo que permita ingresar el nombre de un animal del zoológico,
 	el peso el cual debe ser entre 1 y 1000  y 
 	la temperatura del hábitat (entre -30 y 30)  hasta que el
@@ -14,9 +133,8 @@
 	El peso máximo y el mínimo de todos los animales cuyas temperaturas sean bajo cero.
 */
 
-function mostrar()
-{
 
+/*
 	var respuesta;
 	var contadorAnimales;
 	var animalnombre;
@@ -124,5 +242,5 @@ function mostrar()
 	"<br>d)	El promedio del peso de todos los animales: "+promedioPesos+			
 	"<br>f)	El peso máximo de todos los animales cuyas temperaturas son bajo cero: "+pesoMaximoBajoCero+
 	"<br>f)	El peso minimo de todos los animales cuyas temperaturas son bajo cero: "+pesoMinimoBajoCero);
+*/
 
-}
