@@ -92,13 +92,14 @@ function mostrar()
 			tamañoMenor=ingresaTamaño;
 		}
 
-		if(precio>2000)
+		if(ingresaPrecio>2000)
 		{
-			contadorCeluMayorDosMil++
+			contadorCeluMayorDosMil++;
 		}
 
 		contadorCelulares++;
 		acumuladorPrecios=acumuladorPrecios+ingresaPrecio;
+		console.log("llega esto");
 
 		respuesta=prompt("Ingrese 'si' para continuar");
 	}
